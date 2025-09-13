@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ПРО СТРАЙКБОЛ: CQB</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="https://i.postimg.cc/66GQL5kz/cqbicon.jpg">
+</head>
+<body>
+    <header>
+        <div class="headerleft">
+            <button class="headbutton" onclick="document.location='airsoft.html'">О страйкболе</button>
+            <button class="headbutton current" onclick="document.location='cqb.html'">CQB</button>
+            <button class="headbutton" onclick="document.location='milsim.html'">MilSim </button>
+        </div>
+        <div class="headerright">
+            <button class="headbutton" onclick="document.location='about.html'">Об авторе</button>
+        </div>
+    </header>
+
+    <div class="cqb-start">
+        <h1 class="description-h1" style="font-size: 200px; line-height: 100%; padding-right: 20%">Close Quarters Battle</h1>
+    </div>
+
+    <div class="cqb-description">
+        <p class="cqb-description-p"><a style="font-weight: 1000; text-transform: uppercase; font-size: 35px">CQB (Close Quarters Battle)</a> — это интенсивный формат страйкбола, имитирующий боевые действия в ограниченном пространстве. В отличие от полевых игр, где важны дальность стрельбы и маскировка, здесь всё решают скорость, точность и слаженность команды. Бои происходят на дистанциях 5–15 метров внутри помещений или урбанизированных локаций, где каждое решение должно быть мгновенным, а любая ошибка — фатальной.</p>
+        <div class="cqb-video-block">
+            <div class="cqb-video-text">
+                <p class="cqb-description-p">Главная особенность CQB — высокая динамика. Игроки действуют в условиях ограниченной видимости, узких коридоров и множества укрытий, что требует отточенных тактических приемов.</p>
+                <p class="cqb-description-p">Зачистка комнат, проход через дверные проемы, контроль углов — всё это выполняется в доли секунды. Команда, которая лучше координирует действия, обычно побеждает, ведь одиночные вылазки здесь почти бесполезны.</p>
+            </div>
+            <div class="cqb-video">
+                <video src="media/cqb.mp4" style="width: 40vw" autoplay muted></video>
+            </div>
+        </div>
+        <div class="cqb-equip-block">
+            <div class="cqb-equip">
+                <video src="media/cqbequip.mp4" style="width: 50vw" autoplay muted></video>
+            </div>
+            <div class="cqb-equip-text">
+                <p class="cqb-description-p">Экипировка в CQB отличается минимализмом и функциональностью. Длинные винтовки мешают в тесных помещениях, поэтому чаще используют компактные карабины (например, M4 с укороченным стволом) или пистолеты-пулеметы вроде MP5.</p>
+                <p class="cqb-description-p">Обязательна защита лица и глаз — из-за близкой дистанции попадания часты и болезненны. Разгрузка должна быть легкой, чтобы не сковывать движения, а фонари и лазерные целеуказатели помогают в затемненных зонах.</p>
+            </div>
+        </div>
+        <p style="margin-top: 5%; margin-bottom: 1%" class="cqb-description-p">
+            Локации для страйкбольного CQB делятся на специальные полигоны и адаптированные заброшенные здания. Полигоны — это продуманные лабиринты с комнатами, коридорами и укрытиями, часто стилизованные под реальные объекты. Заброшки же дают более жесткую и непредсказуемую среду, но требуют проверки на безопасность.
+        </p>
+        <p class="cqb-description-p">
+            Основные сценарии — штурм, освобождение заложников, командные дуэли и поиск "документов". В CQB важна скорость: бои решаются за минуты, а неосторожное движение или затяжная перестрелка могут стоить победы. Успех зависит от слаженности команды, быстрой реакции и умения действовать в тесноте.
+        </p>
+        <p class="links-h1">Читайте далее:</p>
+        <div class="milsim-container">
+            <button style="height: 60vh; margin: 0 auto;" class="milsim" onclick="document.location='milsim.html'">
+                <div class="milsim-text">MilSim (Military Simulation) — максимально реалистичные сценарии с длительными миссиями и военной тактикой.</div>
+            </button>
+        </div>
+    </div>
+    <div class="end"></div>
+    <div class="preloader">
+        <div class="preloader__content">
+            <div class="preloader__spinner"></div>
+            <p class="preloader__text">Загрузка...</p>
+        </div>
+    </div>
+    <script>
+        window.addEventListener('load', function () {
+            const preloader = document.querySelector('.preloader');
+            preloader.classList.add('preloader--hidden');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
